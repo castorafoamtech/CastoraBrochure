@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Castora Foam Tech — Interactive Company Brochure 2026</title>
+<meta name="description" content="Castora Foam Tech — Lost Foam Casting and Replica Investment Casting from a 40,000 sq ft foundry in Bhavnagar, Gujarat. ISO container corner castings, pump, automotive, railway and engineering castings.">
+<meta name="theme-color" content="#0B1624">
+<meta property="og:title" content="Castora Foam Tech — Interactive Company Brochure 2026">
+<meta property="og:description" content="An interactive company profile. Lost Foam + Replica Investment Casting, Bhavnagar, India.">
+<link rel="preload" href="fonts/archivo-latin-wdth-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/sora-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="img/shot-01.webp" as="image">
+<link rel="icon" href="logo/mark.webp" type="image/webp">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="is-loading">
+
+<div id="loader" aria-hidden="true">
+  <div class="ld-inner">
+    <img class="ld-mark" src="logo/mark.webp" alt="">
+    <div class="ld-kicker mono">Castora Foam Tech · Company Brochure 2026</div>
+    <div class="ld-label mono">Igniting furnace</div>
+    <div class="ld-temp"><span class="ga" id="ldTemp">0</span><small>°C</small></div>
+    <div class="ld-bar"><i id="ldBar"></i></div>
+    <div class="ld-sub mono">Interactive digital brochure · scroll to explore, tap &amp; drag to interact</div>
+  </div>
+  <div class="ld-foot mono"><span>Castora Foam Tech</span><span>Bhavnagar · Gujarat · India</span></div>
+  <div class="ld-edge"></div>
+</div>
+
+<div id="progress"><i></i></div>
+<header id="hdr">
+  <a href="#top" class="hdr-logo" aria-label="Castora Foam Tech home"><img src="logo/horizontal.webp" alt="Castora Foam Tech" width="114" height="38"><span class="hdr-tag mono">Company brochure<br>2026 edition</span></a>
+  <div class="hdr-right">
+    <a class="hdr-link mono" href="https://castorafoamtech.com" target="_blank" rel="noopener" title="castorafoamtech.com"><svg class="ico" data-i="globe"></svg><span>Website</span></a>
+    <a class="hdr-link mono" href="#contact" title="Contact us"><svg class="ico" data-i="phone"></svg><span>Contact us</span></a>
+    <a class="btn" href="files/Castora_Company_Profile.pdf" target="_blank" rel="noopener" data-pdf data-magnetic title="Download offline brochure (PDF)"><svg class="ico" data-i="download"></svg><span class="lbl">Download offline brochure</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Chapters" aria-expanded="false"><span class="bars"><i></i><i></i></span><em class="mono" style="font-style:normal">Chapters</em></button>
+  </div>
+  <nav class="hdr-bar" aria-label="Quick links">
+    <a href="https://castorafoamtech.com" target="_blank" rel="noopener"><svg class="ico" data-i="globe"></svg><span>Website</span></a>
+    <a href="#contact"><svg class="ico" data-i="phone"></svg><span>Contact us</span></a>
+    <a href="files/Castora_Company_Profile.pdf" target="_blank" rel="noopener" data-pdf><svg class="ico" data-i="download"></svg><span class="lbl">Offline brochure</span></a>
+  </nav>
+</header>
+<nav id="rail" aria-label="Chapters"></nav>
+<div id="menu"><ol></ol></div>
+<div id="cursor" class="hide"><div class="c-ring"><em></em></div><div class="c-dot"></div></div>
+<div class="grain"></div>
+<a class="wa-fab" href="https://wa.me/919081919100?text=Hi%20Castora%20Foam%20Tech%2C%20I%20saw%20your%20brochure%20and%20would%20like%20to%20discuss%20a%20casting%20requirement." target="_blank" rel="noopener" aria-label="Chat with Castora on WhatsApp" data-cursor="Chat"><svg class="ico wa-ico" viewBox="0 0 24 24"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 8.2c.2-.5.6-.6.9-.6h.5c.2 0 .4.1.5.4l.7 1.6c.1.2 0 .4-.1.6l-.5.6c-.1.1-.1.3 0 .4.6 1 1.4 1.8 2.4 2.4.1.1.3.1.4 0l.6-.6c.2-.2.4-.2.6-.1l1.6.7c.2.1.4.3.4.5v.5c0 .4-.2.8-.6 1-.7.4-1.6.5-2.6.1-2.1-.8-3.8-2.5-4.6-4.6-.3-1-.2-2 .2-2.9z" fill="currentColor" stroke="none"/></svg><span class="mono">WhatsApp</span></a>
+
+<main>
+<!-- HERO -->
+<section class="hero" id="top" data-chapter="Intro">
+  <div class="hero-pin">
+    <div class="hero-media" id="heroMedia"><img src="img/shot-01.webp" alt="Castora ISO container corner castings in front of a molten metal pour" fetchpriority="high"></div>
+    <div class="hero-shade"></div>
+    <canvas id="embers"></canvas>
+    <div class="hero-grid"></div>
+    <div class="hero-dim" id="heroDim"></div>
+    <div class="hero-top mono fade-on-ready"><span>Interactive company brochure · 2026</span><span>Bhavnagar, Gujarat, India</span></div>
+    <div class="hero-badge mono fade-on-ready"><i></i>Digital brochure — scroll to explore</div>
+    <h1 class="hero-title mega" id="heroTitle">
+      <span class="ht-line ht-1 gs" data-split>Castora</span>
+      <span class="ht-line ht-2 ga" data-split>Foam Tech</span>
+    </h1>
+    <div class="hero-foot" id="heroFoot">
+      <a href="#technology" class="hero-tech-card fade-on-ready"><b class="mono">01 · Technology</b><span>Lost Foam<br>Casting</span></a>
+      <div class="scroll-cue mono fade-on-ready"><span>Scroll</span><i></i></div>
+      <a href="#technology" class="hero-tech-card r fade-on-ready"><b class="mono">02 · Technology</b><span>Replica Investment<br>Casting</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- COMPANY -->
+<section class="sec manifesto" id="company" data-chapter="Company">
+  <div class="wrap">
+    <div class="eyebrow mono rv"><b>01</b>Engineered for consistency</div>
+    <h2 class="statement" id="statement">One casting partner. <em>Two complementary technologies.</em></h2>
+  </div>
+  <div class="expand" id="expand">
+    <div class="expand-pin">
+      <div class="expand-frame" id="expandFrame">
+        <img src="img/shot-02.webp" alt="Foundry floor — melting and pouring" loading="lazy">
+        <div class="brackets"><i></i><i></i><i></i><i></i></div>
+        <span class="fig-tag mono" style="left:52px;top:52px">Fig. 01 · Foundry floor — melting / pouring</span>
+      </div>
+      <div class="expand-copy" id="expandCopy">
+        <p class="lead">A modern casting company focused on precision, repeatability and scalable production.</p>
+        <div class="tags"><span>Precision cast. <b>01</b></span><span>India made. <b>02</b></span><span>Built to last. <b>03</b></span></div>
+      </div>
+    </div>
+  </div>
+  <div class="company-foot">
+    <p class="lead rv">With Lost Foam Casting and Replica Investment Casting under one manufacturing platform, Castora works with customers from <span style="color:var(--amber)">component development and tooling through casting, finishing and inspection.</span></p>
+    <div class="rv d2">
+      <div class="mono" style="color:var(--s400);margin-bottom:16px">What that means for you</div>
+      <p class="body">One partner owns the whole route — from the first drawing to repeat production — so geometry, metallurgy and inspection are controlled under one roof.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SCALE -->
+<section class="sec scale" id="scale" data-chapter="Scale">
+  <div class="scale-pin">
+    <div class="scale-bg"><img id="scaleImg" src="img/shot-03.webp" alt="Castora's 40,000 sq ft manufacturing facility" loading="lazy"></div>
+    <div class="scale-shade"></div>
+    <div class="wrap scale-inner">
+      <div class="eyebrow mono"><b>02</b>Built for scale</div>
+      <div class="kicker">Highly automated</div>
+      <div class="mega-num gs"><span id="bigNum">0</span></div>
+      <div class="unit"><b>SQ FT</b><span>Manufacturing facility</span></div>
+      <div class="stats" id="stats">
+        <div class="stat"><div class="num"><span data-to="300">0</span><sup>MT</sup></div><p>Production capacity per month</p></div>
+        <div class="stat"><div class="num"><span data-to="550">0</span><sup>kW</sup></div><p>Induction melting capacity</p></div>
+        <div class="stat"><div class="num"><span data-to="19">0</span></div><p>Mould boxes</p></div>
+        <div class="stat hot"><div class="num"><span data-to="98">0</span><sup>%</sup></div><p>Sand reclamation</p><div class="segs" id="segs"></div></div>
+      </div>
+      <p class="scale-note">Capabilities in place to support consistent, high-volume production of engineered cast components.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNOLOGY -->
+<section class="sec tech" id="technology" data-chapter="Technology">
+  <div class="wrap tech-head">
+    <div>
+      <div class="eyebrow mono rv"><b>03</b>Two technologies. One standard.</div>
+      <h2 class="mega h-l rv d1"><span class="gs">The right process</span><br><span class="ga">for the right component.</span></h2>
+    </div>
+    <div class="hint mono rv d2"><svg class="ico" data-i="move-horizontal"></svg>Left: Lost Foam · Right: Replica Investment — drag the line to compare</div>
+  </div>
+  <div class="compare" id="compare" data-cursor="Drag">
+    <div class="cmp-side cmp-a">
+      <img src="img/shot-04.webp" alt="Expendable EPS foam pattern cluster" loading="lazy">
+      <div class="cmp-copy" id="cmpA">
+        <span class="mono" style="color:var(--amber)">01 · LFC</span>
+        <h3 class="mega"><span class="gs">Lost Foam</span><br><span class="ga">Casting</span></h3>
+        <ul><li>Complex geometries.</li><li>Scalable production.</li><li>Controlled manufacturing.</li></ul>
+        <p>Complex castings through expendable foam patterns — particularly suited to components requiring intricate geometry and repeatable production.</p>
+      </div>
+      <span class="cmp-tag mono">Expendable foam pattern / cluster</span>
+    </div>
+    <div class="cmp-side cmp-b">
+      <img src="img/shot-05.webp" alt="Replica pattern and investment shell" loading="lazy">
+      <div class="cmp-copy" id="cmpB">
+        <span class="mono" style="color:var(--amber)">RIC · 02</span>
+        <h3 class="mega"><span class="gs">Replica</span><br><span class="ga">Investment Casting</span></h3>
+        <ul><li>Fine detail.</li><li>Complex geometry.</li><li>Engineering precision.</li></ul>
+        <p>Complements Lost Foam for intricate components where investment casting characteristics are better suited to the application.</p>
+      </div>
+      <span class="cmp-tag mono">Replica pattern / investment shell</span>
+    </div>
+    <div class="cmp-label l mono"><span>←</span>Lost Foam<em> Casting</em></div><div class="cmp-label r mono">Replica<em> Investment Casting</em><span>→</span></div>
+    <div class="cmp-handle"><div class="cmp-knob"><svg class="ico" data-i="move-horizontal"></svg><em class="mono">Drag</em></div></div>
+  </div>
+</section>
+
+<!-- CONTAINER -->
+<section class="sec container-sec light" id="container" data-chapter="Container castings">
+  <div class="wrap c-head">
+    <div>
+      <div class="eyebrow mono rv"><b>04</b>Container castings · Main product</div>
+      <h2 class="mega h-l rv d1"><span class="gn">Built for the global container</span> <span class="ga">ecosystem.</span></h2>
+    </div>
+    <p class="rv d2">Specialised capability for ISO container corner castings and related engineered container components.</p>
+  </div>
+  <div class="wrap c3-grid">
+    <div class="c3-stage" id="c3Stage" data-cursor="Drag">
+      <div class="c3-floor"></div>
+      <div class="c3" id="c3"></div>
+      <div class="c3-dims mono"><span>ISO corner casting · <b id="c3Var" style="color:var(--amber6)">TL</b></span><span>Interactive model</span></div>
+      <div class="c3-hint mono"><svg class="ico" data-i="move-horizontal"></svg>Drag to rotate</div>
+    </div>
+    <div>
+      <div class="spec rv">
+        <div class="spec-row" data-view="front"><span class="mono">Standard</span><b>ISO 1161 compatible</b></div>
+        <div class="spec-row" data-view="iso"><span class="mono">Weight</span><b>Approx. 11.5 kg</b></div>
+        <div class="spec-row" data-view="top"><span class="mono">Dimensions</span><b>162 × 178 × 118 mm</b></div>
+        <div class="spec-row" data-view="side"><span class="mono">Material</span><b>SCW480 / SCW490</b></div>
+        <div class="spec-row" data-view="iso2"><span class="mono">Variants</span><b>TL · TR · BL · BR</b></div>
+        <div class="spec-row" data-view="front"><span class="mono">Finish</span><b>Shot blasted and machined</b></div>
+      </div>
+      <div class="variants rv d1">
+        <svg class="endframe" viewBox="0 0 112 96" id="endframe">
+          <rect x="14" y="14" width="84" height="68" fill="none" stroke="#7FA0B8" stroke-width="2" stroke-dasharray="3 3"/>
+          <rect class="c" data-v="TL" x="4" y="4" width="20" height="20"/><rect class="c" data-v="TR" x="88" y="4" width="20" height="20"/>
+          <rect class="c" data-v="BL" x="4" y="72" width="20" height="20"/><rect class="c" data-v="BR" x="88" y="72" width="20" height="20"/>
+          <text x="56" y="52" text-anchor="middle" font-family="IBM Plex Mono" font-size="7" fill="#7FA0B8" letter-spacing="1">END FRAME</text>
+        </svg>
+        <div>
+          <div class="mono" style="color:var(--ink3);margin-bottom:10px">Corner position</div>
+          <div class="var-btns" id="varBtns"><button class="on" data-v="TL">TL</button><button data-v="TR">TR</button><button data-v="BL">BL</button><button data-v="BR">BR</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="band">
+    <div class="band-img"><img src="img/shot-12.webp" alt="Castora corner castings with caliper" loading="lazy" data-par="-.12"></div>
+    <div class="band-bar">
+      <div><b>≈ <span data-count="11.5" data-dec="1">11.5</span><small>kg</small></b><span class="mono">Weight</span></div>
+      <div><b>162 × 178 × 118<small>mm</small></b><span class="mono">Dimensions</span></div>
+      <div><b>SCW480/490</b><span class="mono">Material grade</span></div>
+    </div>
+  </div>
+  <div class="beyond">
+    <div class="beyond-img rv"><img src="img/shot-11.webp" alt="Castora ISO container corner castings" loading="lazy"><span class="mono">8 corner castings per container</span></div>
+    <div class="rv d1">
+      <div class="eyebrow mono"><b>04</b>Product focus</div>
+      <h3 class="mega h-m"><span class="gn">Beyond corner</span> <span class="ga">castings</span></h3>
+      <p class="body" style="margin-top:22px;font-size:18px">Castora is developing a broader range of engineered container components. Every casting follows the same documented route — controlled melting, shot blasting, machining and in-house inspection with heat and batch traceability.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTORS -->
+<section class="sec sectors" id="sectors" data-chapter="Sectors">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow mono rv"><b>05</b>Castings portfolio</div>
+        <h2 class="mega h-l rv d1"><span class="gs">One foundry.</span><br><span class="ga">Multiple sectors.</span></h2>
+      </div>
+      <p class="rv d2">Lost Foam and Replica Investment Casting applied to the components each industry depends on. Scroll through each sector.</p>
+    </div>
+    <div class="s-index rv d2" id="sIndex"></div>
+  </div>
+  <div class="showcase" id="showcase"></div>
+</section>
+
+<!-- PROCESS FILM -->
+<section class="film" id="process" data-chapter="LFC process">
+  <div class="film-pin">
+    <div class="film-track" id="filmTrack"></div>
+    <div class="film-bar top"></div><div class="film-bar bot"></div>
+    <div class="film-hud mono"><span class="rec"><i></i>06 · LFC process · cutaway</span><span id="filmTc">00:00:00</span></div>
+    <div class="film-tl"><div class="bar"><i id="filmBar"></i></div><ol id="filmSteps"></ol></div>
+  </div>
+</section>
+
+<!-- HOLD TO POUR -->
+<section class="sec pour" id="pour" data-chapter="Pour">
+  <div class="wrap pour-grid">
+    <div class="pour-copy">
+      <div class="eyebrow mono rv"><b>Try it</b>Interactive</div>
+      <h2 class="mega h-xl rv d1"><span class="gs">Hold to</span><br><span class="ga">pour.</span></h2>
+      <p class="rv d2">Press and hold the button. Molten metal fills the mould and takes the exact shape of the pattern — then cools into a finished corner casting.</p>
+      <div class="readout rv d3">
+        <div><small class="mono">Temp</small><b id="pTemp">32</b><span style="color:var(--s400)"> °C</span></div>
+        <div><small class="mono">Fill</small><b id="pFill">0</b><span style="color:var(--s400)"> %</span></div>
+        <div class="st"><small class="mono">State</small><b id="pState">Ready</b></div>
+      </div>
+    </div>
+    <div class="pour-stage rv d2">
+      <div class="pour-svgwrap">
+        <svg id="pourSvg" viewBox="0 0 420 440"></svg>
+        <canvas id="pourSparks"></canvas>
+        <div class="pour-done" id="pourDone"><b class="mega ga">Cast.</b><span class="mono" style="color:var(--s300)">Near-net shape · ready for finishing</span></div>
+      </div>
+      <button class="pour-btn" id="pourBtn" data-cursor="Hold" aria-label="Hold to pour">
+        <svg viewBox="0 0 124 124"><circle cx="62" cy="62" r="59" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="2"/><circle id="pourRing" cx="62" cy="62" r="59" fill="none" stroke="#E0892B" stroke-width="3" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg>
+        <span class="core"><span id="pourLbl">HOLD<br>TO POUR</span></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- WORKFLOW -->
+<section class="sec workflow" id="workflow" data-chapter="Workflow">
+  <div class="wrap">
+    <div class="eyebrow mono rv"><b>07</b>From drawing to casting</div>
+    <h2 class="mega h-l rv d1"><span class="gs">One engineering</span><br><span class="ga">workflow.</span></h2>
+    <div class="wf-grid">
+      <div class="wf-sticky"><img id="wfImg" src="img/shot-09.webp" alt="Production line" loading="lazy"><div class="brackets"><i></i><i></i><i></i><i></i></div><div class="wf-now"><div class="n ga" id="wfN">01</div><div class="t" id="wfT">Drawing</div></div></div>
+      <div class="wf-list" id="wfList"><div class="wf-track"><div class="wf-fill" id="wfFill"></div><div class="wf-head" id="wfHead"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- QUALITY -->
+<section class="sec quality light" id="quality" data-chapter="Quality">
+  <div class="wrap">
+    <div class="eyebrow mono rv"><b>08</b>Quality by process</div>
+    <h2 class="mega h-l rv d1"><span class="gn">Consistency</span><br><span class="ga">you can cast on.</span></h2>
+    <div class="q-grid">
+      <div class="scanner rv">
+        <img src="img/shot-10.webp" alt="In-house inspection — spectrometer and CMM" loading="lazy" data-par="-.1">
+        <div class="scan"></div>
+        <div class="brackets"><i></i><i></i><i></i><i></i></div>
+        <div class="scan-read mono" id="scanRead"><span>Spectro analysis</span><span>Dimensional inspection</span><span>Hardness testing</span><span>Heat &amp; batch traceability</span></div>
+      </div>
+      <div class="q-right">
+        <div class="principle rv d1"><span class="mono">Principle</span><h3>Quality begins with process control.</h3></div>
+        <div class="q-cards" id="qCards"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="sec why" id="why" data-chapter="Why Castora">
+  <div class="wrap">
+    <div class="eyebrow mono rv"><b>09</b>Why Castora</div>
+    <h2 class="mega h-xl rv d1"><span class="gs">Six reasons.</span><br><span class="ga">One partner.</span></h2>
+    <div class="why-grid" id="whyGrid"></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec contact" id="contact" data-chapter="Contact">
+  <div class="wrap contact-head">
+    <div class="eyebrow mono rv"><b>10</b>Engineering what's next</div>
+    <h2 class="mega h-xl rv d1"><span class="gs">Engineering</span><br><span class="ga">what's next.</span></h2>
+    <p class="rv d2">Castora is building a modern Indian casting platform for customers who demand more from their manufacturing partner.</p>
+  </div>
+  <div class="marquee"><div class="mq-track" id="mq"></div></div>
+  <div class="wrap ct-grid">
+    <div class="ct-card rv">
+      <img src="logo/horizontal.webp" alt="Castora Foam Tech">
+      <div class="tag">Consistency you can <em>cast on.</em></div>
+      <div class="ct-row"><span class="mono">Address</span><a href="https://www.google.com/maps/search/?api=1&query=21.737383,72.025018" target="_blank" rel="noopener">Plot No. 3, Survey No. 88, Nr. Khodiyar Mandir, Bhavnagar–Rajkot Highway, Shampara (Khodiyar), Navagam, Bhavnagar, Gujarat – 364060</a></div>
+      <div class="ct-row"><span class="mono">Phone</span><a href="tel:+919081919100">+91 90819 19100</a></div>
+      <div class="ct-row"><span class="mono">Email</span><a href="mailto:info@castorafoamtech.com">info@castorafoamtech.com</a></div>
+      <div class="ct-row"><span class="mono">Web</span><a href="https://castorafoamtech.com" target="_blank" rel="noopener">castorafoamtech.com</a></div>
+      <div class="ct-row"><span class="mono">Social</span><span>@castorafoamtech · Instagram · LinkedIn</span></div>
+    </div>
+    <div class="ct-img rv d1"><img src="img/shot-13.webp" alt="Stacked Castora corner castings" loading="lazy"></div>
+    <div class="ct-cta rv d2">
+      <a class="big" href="mailto:info@castorafoamtech.com?subject=Drawing%20for%20quotation&body=Hi%20Castora%20team%2C%0A%0APlease%20find%20our%20drawing%20attached.%0A%0AComponent%3A%0AMaterial%3A%0AAnnual%20volume%3A%0A" data-magnetic><svg class="ico" data-i="arrow-up-right"></svg><b>Send us your drawing</b><span class="mono">We reply with process &amp; quote</span></a>
+      <a class="btn btn-ghost" href="tel:+919081919100">Call +91 90819 19100 <svg class="ico" data-i="phone"></svg></a>
+      <a class="btn btn-wa" href="https://wa.me/919081919100?text=Hi%20Castora%20Foam%20Tech%2C%20I%20saw%20your%20brochure%20and%20would%20like%20to%20discuss%20a%20casting%20requirement." target="_blank" rel="noopener">Chat on WhatsApp <svg class="ico wa-ico" viewBox="0 0 24 24"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 8.2c.2-.5.6-.6.9-.6h.5c.2 0 .4.1.5.4l.7 1.6c.1.2 0 .4-.1.6l-.5.6c-.1.1-.1.3 0 .4.6 1 1.4 1.8 2.4 2.4.1.1.3.1.4 0l.6-.6c.2-.2.4-.2.6-.1l1.6.7c.2.1.4.3.4.5v.5c0 .4-.2.8-.6 1-.7.4-1.6.5-2.6.1-2.1-.8-3.8-2.5-4.6-4.6-.3-1-.2-2 .2-2.9z" fill="currentColor" stroke="none"/></svg></a>
+      <a class="btn btn-ghost" href="files/Castora_Company_Profile.pdf" target="_blank" rel="noopener" data-pdf><span class="lbl">Download offline brochure (PDF)</span> <svg class="ico" data-i="download"></svg></a>
+    </div>
+  </div>
+  <footer>
+    <img src="logo/horizontal.webp" alt="Castora Foam Tech">
+    <span class="mono">© 2026 Castora Foam Tech · Bhavnagar, Gujarat, India</span>
+    <a href="#top" class="mono" style="color:var(--amber)">Back to top ↑</a>
+  </footer>
+</section>
+</main>
+
+<script src="icons.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
