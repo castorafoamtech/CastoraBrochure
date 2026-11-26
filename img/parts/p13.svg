@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7E868D"/><stop offset=".35" stop-color="#E9EDF0"/><stop offset=".7" stop-color="#AEB5BB"/><stop offset="1" stop-color="#6E757C"/></linearGradient><radialGradient id="b" cx=".5" cy=".45" r=".7"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E9EEF2"/></radialGradient></defs><rect width="400" height="400" fill="url(#b)"/><ellipse cx="200" cy="283" rx="80" ry="12" fill="rgba(30,40,55,.18)"/>
+<g transform="translate(0,135)"><path d="M150 0h90v130h-90z" fill="url(#g)"/><path d="M150 0h90" stroke="#fff" stroke-opacity=".6" stroke-width="3"/><path d="M240 14 h22 v11 h-22z" fill="#9AA2A9"/>
+<path d="M240 36 h22 v11 h-22z" fill="#9AA2A9"/>
+<path d="M240 58 h22 v11 h-22z" fill="#9AA2A9"/>
+<path d="M240 80 h22 v11 h-22z" fill="#9AA2A9"/>
+<path d="M240 102 h22 v11 h-22z" fill="#9AA2A9"/><path d="M195 0v130" stroke="#5B6269" stroke-width="2" stroke-dasharray="6 5"/></g><text x="200" y="370" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="15" letter-spacing="3" fill="#7FA0B8">ILLUSTRATION · SPLIT BUSH</text></svg>

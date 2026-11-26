@@ -55,7 +55,7 @@ const SHOW=[
  {id:'more',code:'05.6',tag:'Your component',a:'And more…',b:'Your drawing.',short:'Your component',d:'Castings for other industries — send us your drawing and we will recommend the right process, material and route.',theme:'dark',sch:'sheet',fig:'From drawing to repeat production',cta:1,
   subs:[['Send a drawing','Component requirement & specification.'],['Engineering','Material & process evaluation.'],['Tooling','Pattern and tooling development.'],['Repeat production','Documented, repeatable production.']],chips:['Lost Foam','Replica Investment','In-house inspection']}
 ];
-const IDX=[['container','Container castings','#container','04'],['fan','Pump, motor & valve','#sc-pump','05.2'],['car','Automotive','#sc-auto','05.3'],['train-front','Railway','#sc-rail','05.4'],['cog','Engineering','#sc-eng','05.5'],['plus','And more','#sc-more','05.6']];
+const IDX=[['container','Container castings','#container','04'],['shield-check','Door locking device','#locking','04.2'],['fan','Pump, motor & valve','#sc-pump','05.2'],['car','Automotive','#sc-auto','05.3'],['train-front','Railway','#sc-rail','05.4'],['cog','Engineering','#sc-eng','05.5'],['plus','And more','#sc-more','05.6']];
 function sch(kind){
  const f=n=>(+n).toFixed(1),P2=(r,a,cx=200,cy=200)=>[cx+r*Math.cos(a),cy+r*Math.sin(a)];
  const C=(r,cx=200,cy=200)=>`<circle class="dr" pathLength="1" cx="${f(cx)}" cy="${f(cy)}" r="${r}"/>`,Pt=s=>`<path class="dr" pathLength="1" d="${s}"/>`;
@@ -423,13 +423,56 @@ function loader(){const ld=$('#loader'),T=$('#ldTemp'),B=$('#ldBar');const t0=pe
  (function step(now){const el=now-t0;let p=clamp(el/MIN);if(!ready)p=Math.min(p,.86+.1*clamp((el-MIN)/(MAX-MIN)));const e=easeIO(p);T.textContent=Math.round(e*1550).toLocaleString('en-IN');B.style.transform=`scaleX(${e})`;ld.style.setProperty('--heat',e);
   if((p>=1&&ready)||el>MAX){setTimeout(()=>{ld.classList.add('done');document.body.classList.remove('is-loading');setTimeout(()=>document.body.classList.add('ready'),150);setTimeout(()=>{ld.style.display='none';measure()},1400)},250)}else requestAnimationFrame(step)})(t0)}
 
+
+/* ---------- door locking device ---------- */
+const PARTS=[
+ ['01','Cam LH','SL-01/1L-G',4,'Without surface treatment','p01.webp','Top cam on the locking bar — engages the keeper to pull the door tight.',[38.9,11.3]],
+ ['02','Cam RH','SL-02/2R-G',4,'Without surface treatment','p02.webp','Bottom cam on the locking bar, mirror of the LH cam.',[38.9,88.8]],
+ ['03','Keeper LH','SL-03/1L-G',4,'Electro-galvanised','p03.webp','Welded to the header — receives the top cam when the bar is rotated.',[38.0,3.2]],
+ ['04','Keeper RH','SL-04/1R-G',4,'Electro-galvanised','p04.webp','Welded to the sill — receives the bottom cam.',[38.9,95.9]],
+ ['05','Handle','SL-05/1',4,'Hot-dip galvanised','p05.webp','Rotates the locking bar to engage both cams in one movement.',[79.2,51.5]],
+ ['06','Handle hub','SL-06/1',4,'Without surface treatment','p06.webp','Welded to the locking bar — the pivot point of the handle.',[45.7,52.4]],
+ ['07','Retainer catch','SL-07/1',4,'Hot-dip galvanised','p07.webp','Holds the handle closed against the door.',[62.5,37.6]],
+ ['08','Retainer plate','SL-08/1',4,'Hot-dip galvanised','p08.webp','Door-mounted plate that carries the retainer catch and seal hole.',[68.6,39.6]],
+ ['09','Bush','SL-09/2',4,'SUS304 stainless','p09.svg','Stainless bush for the retainer pivot.',[57.7,36.1]],
+ ['10','Bearing bracket outer — large','SL-10/1',8,'Hot-dip galvanised','p10.webp','Guides the locking bar on the door leaf.',[15.3,25.1]],
+ ['11','Bearing bracket outer — small','SL-11/1',8,'Hot-dip galvanised','p11.webp','Intermediate guide bracket for the locking bar.',[15.9,38.7]],
+ ['12','Split large bush','SL-12/1',8,'—','p12.svg','Wear bush inside the large bearing bracket.',[48.3,24.6]],
+ ['13','Split small bush','SL-13/2',8,'—','p13.svg','Wear bush inside the small bearing bracket.',[48.3,38.5]],
+ ['14','Rivet','SL-14/3',4,'SUS304 stainless','p14.webp','Stainless rivet fixing the handle to the hub.',[54.8,51.0]],
+ ['15','Anti-rack ring','SL-15/1',16,'Without surface treatment — for easy welding','p15.webp','Rings on the locking bar that resist racking of the door.',[14.6,32.1]]
+];
+function lockInit(){
+ const hots=$('#ldHots');hots.innerHTML=PARTS.map((p,i)=>`<button class="ld-hot" style="left:${p[7][0]}%;top:${p[7][1]}%" data-i="${i}" aria-label="${p[0]} ${p[1]}"><span>${+p[0]}</span></button>`).join('');
+ $('#ldFit').innerHTML=window.containerDoorSVG?window.containerDoorSVG():'';const fit=$('#ldFit svg');const zoom=$('#ldZoom');
+ const sheet=$('#plSheet');const hb=$$('.ld-hot',hots);let cur=0,hold=0,last=0,vis=false;const img=$('#ldImg'),det=$('#ldDetail');
+ function show(i,user){cur=(i+PARTS.length)%PARTS.length;last=performance.now();if(user)hold=last+9000;const p=PARTS[cur];
+  det.classList.add('swap');setTimeout(()=>{img.src='img/parts/'+p[5];img.alt=p[1];$('#ldNo').textContent=p[0];$('#ldPn').textContent=p[2];$('#ldName').textContent=p[1];$('#ldDesc').textContent=p[6];$('#ldQty').textContent=p[3];$('#ldFin').textContent=p[4];$('#ldCount').textContent=p[0]+' / 15';det.classList.remove('swap')},user?120:0);
+  hb.forEach((b,j)=>b.classList.toggle('on',j===cur));
+  zoom.style.transformOrigin=p[7][0]+'% '+p[7][1]+'%';zoom.style.transform='scale(1.75)';$('#ldZl').textContent='Zoom · '+p[0];
+  if(fit){fit.classList.add('dim');$$('.pt',fit).forEach(g=>g.classList.toggle('on',g.dataset.p===p[0]))}}
+ hb.forEach((b,i)=>{b.addEventListener('click',()=>show(i,true));if(fine)b.addEventListener('mouseenter',()=>show(i,true))});
+ $('#ldPrev').addEventListener('click',()=>show(cur-1,true));$('#ldNext').addEventListener('click',()=>show(cur+1,true));
+ new IntersectionObserver(es=>{vis=es[0].isIntersecting;document.body.classList.toggle('in-lock',vis)},{threshold:.2}).observe($('#locking .ld-grid'));
+ (function loop(now){if(vis&&now>hold&&now-last>2800&&!sheet.classList.contains('open'))show(cur+1);requestAnimationFrame(loop)})(0);
+ show(0);
+ // sheet
+ $('#plGrid').innerHTML=PARTS.map(p=>`<article class="pl-card"><div class="pl-img"><img src="img/parts/${p[5]}" alt="${p[1]}" loading="lazy"><span class="mono">${p[0]}</span></div><div class="pl-txt"><span class="mono">${p[2]}</span><b>${p[1]}</b><p>${p[6]}</p><div class="pl-meta"><span class="mono">Qty ${p[3]}</span><span class="mono">${p[4]}</span></div></div></article>`).join('');
+ $('#plTable').innerHTML=`<table><thead><tr><th>#</th><th>Part</th><th>Part no.</th><th>Qty</th><th>Finish</th></tr></thead><tbody>${PARTS.map(p=>`<tr><td class="mono">${p[0]}</td><td><img src="img/parts/${p[5]}" alt="" loading="lazy">${p[1]}</td><td class="mono">${p[2]}</td><td>${p[3]}</td><td>${p[4]}</td></tr>`).join('')}</tbody></table>`;
+ const open=()=>{sheet.classList.add('open');document.body.classList.add('sheet-open');$$('.pl-card',sheet).forEach((c,i)=>{c.style.transitionDelay=(.15+i*.035)+'s'})},close=()=>{sheet.classList.remove('open');document.body.classList.remove('sheet-open')};
+ $('#ldAll').addEventListener('click',open);$('#plClose').addEventListener('click',close);sheet.addEventListener('click',e=>{if(e.target===sheet)close()});
+ $$('.pl-cta a[href^="#"]',sheet).forEach(a=>a.addEventListener('click',close));
+ addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+ $$('.pl-tabs button',sheet).forEach(b=>b.addEventListener('click',()=>{$$('.pl-tabs button',sheet).forEach(x=>x.classList.toggle('on',x===b));sheet.classList.toggle('as-table',b.dataset.v==='table')}));
+}
+
 /* ---------- pdf download ---------- */
 function pdfInit(){let dl=null;if(!(window.claude&&typeof window.claude.use==='function'))$$('[data-pdf]').forEach(b=>{b.setAttribute('download','Castora_Foam_Tech_Brochure_2026.pdf');b.removeAttribute('target')});
  if(window.claude&&typeof window.claude.use==='function'){window.claude.use('downloads').then(d=>{dl=d}).catch(()=>{})}
  $$('[data-pdf]').forEach(b=>{const l=$('.lbl',b)||b;b.addEventListener('click',async e=>{if(!dl)return;e.preventDefault();const old=l.textContent;try{l.textContent='Preparing…';const blob=await (await fetch(b.getAttribute('href'))).blob();l.textContent='Confirm to save…';await dl.save({filename:'Castora_Foam_Tech_Brochure_2026.pdf',data:blob});l.textContent='Saved ✓'}catch(err){l.textContent=err&&err.code==='declined'?old:'Try again'}setTimeout(()=>l.textContent=old,3000)})})}
 
 /* ---------- init ---------- */
-build();initScenes();showcaseInit();menuInit();interactions();revealInit();pdfInit();
+build();initScenes();showcaseInit();lockInit();menuInit();interactions();revealInit();pdfInit();
 W=words();SEG=segs();fSteps=$$('#filmSteps li');wfItems=$$('#wfList .wf-item');
 scrollTo(0,0);buildCube();setVar('TL');sizeEmbers();measure();setCmp(50);
 for(let k=1;k<=6;k++)UPD[k](0,0);
